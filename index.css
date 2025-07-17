@@ -1,0 +1,150 @@
+bodyn{
+  margin: 0;
+}
+
+.top-pane {
+  background-color: hsl(225, 6%, 25%);
+}
+
+.pane {
+  height: 50vh;
+  display: flex;
+}
+
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  background-color: hsl(225, 6%, 25%);
+}
+
+.editor-container.collapsed {
+    flex-grow: 0;
+}
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: .5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
+  color: white;
+  padding: .5rem .5rem .5rem 1rem;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  overflow: hidden;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111;
+  --editor-bg: #f5f5f5;
+}
+
+.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #eeeeee;
+  --editor-bg: #2b2b2b;
+}
+
+body, .app {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.editor-container {
+  background: var(--editor-bg);
+}
+
+.theme-toggle {
+  padding: 0.3rem 0.6rem;
+  margin: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--editor-bg);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download-btn {
+  margin: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--editor-bg);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.tab-bar button {
+  padding: 4px 10px;
+  background: var(--editor-bg);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab-bar .active-tab {
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+.context-menu {
+  background: var(--editor-bg);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  list-style: none;
+  padding: 0.3rem 0;
+  border-radius: 6px;
+  width: 120px;
+}
+
+.context-menu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
